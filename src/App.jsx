@@ -6,12 +6,10 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Ticket Tracker</h1>
-        <div className='grid-container'>
-        {team.map( item => {
-            return <Employee key={item.id} employee={item}/>
-          })}
+      <div className='ticket-tracker'>
+        <h1 className='ticket-tracker__heading'>Ticket Tracker</h1>
+        <div className='ticket-tracker__cards'>
+          {team.map(item => <Employee key={item.id} employee={item}/>)}
         </div>
       </div>
     </>
@@ -19,4 +17,3 @@ function App() {
 };
 
 export default App;
-

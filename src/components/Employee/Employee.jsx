@@ -1,7 +1,8 @@
 import {React, useState} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
+import "../../sass/_variables.scss";
 import "./Employee.scss";
-// import team from "../../data/team.js"
-
 
 const Employee = (props) => {
 
@@ -17,15 +18,16 @@ const Employee = (props) => {
         }
     };
 
-return <div className='card'>
+return <div className='employee-card'>
             <div>
-                <div>{props.employee.name}</div>
-                <div>{props.employee.role}</div>
+                <div className="employee-card__name"><small>name:</small><br></br><b>{props.employee.name}</b></div>
+                <div className="employee-card__role"><small>role:</small><br></br><b>{props.employee.role}</b></div>
             </div>
-            <div className="actions">
-                <button className="btn" onClick={handleDecrement}>Delete</button>
-                <span>{counter}</span>
-                <button className="btn" onClick={handleIncrement}>Add</button>
+            <div className="counter-block">
+                <h2 className="counter-block__header">Task counter</h2>
+                <button className="counter-block__btn" onClick={handleDecrement}><FontAwesomeIcon icon={faMinus} /></button>
+                <span className="counter-block__count-tracker"><b>{counter}</b></span>
+                <button className="counter-block__btn" onClick={handleIncrement}><FontAwesomeIcon icon={faPlus} /></button>
             </div>
         </div>
 }

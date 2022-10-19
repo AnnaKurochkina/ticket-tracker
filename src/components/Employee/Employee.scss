@@ -1,46 +1,58 @@
-.employeeCard__container {
-    display: block;
-    margin: auto;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import "../../sass/_variables.scss";
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-
-h1, h2 {
-    color: #333333;
+.counter-block {
+  background-color: $color-counter;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+    
+  &__header {
+    padding-bottom: 1rem;
   }
-  
-  .btn {
+
+  &__btn {
     font: inherit;
     padding: 0.5rem 1.5rem;
     cursor: pointer;
-    border-radius: 4px;
-    background-color: #800040;
-    color: white;
-    border: 1px solid #800040;
-    margin: 0 1rem;
+    border-radius: 10px;
+    background-color: $color-button;
+    color: $color-card;
+    border: 1px solid $color-outline;
+
+    &:hover {
+      background-color: $color-hover;
+
+      &:active {
+        background-color: lighten($color-hover, 20%);
+      }
+    }
   }
-  
-  .btn:hover {
-    background-color: #9c1458;
-    border-color: #9c1458;
+
+  &__count-tracker {
+    margin: 1rem;
   }
-  
-  .btn--alt {
-    background-color: transparent;
-    color: #800040;
+}
+
+.employee-card {
+  background-color: $color-card;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px $color-outline;
+  padding: .6rem;
+  width: 20rem;
+
+  &__name {
+    border-bottom: 1px dashed $color-outline;
+    font-size: 22px;
   }
-  
-  .btn--alt:hover {
-    background-color: #f8dae9;
+
+  &__role {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 22px;
   }
-  
-  .card {
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    width: 20rem;
-  }
-  
-  .actions {
-    text-align: right;
-  }
+}

@@ -1,75 +1,30 @@
-/* .App {
-  text-align: center;
-}
-
-.card {
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  width: 20rem;
-} */
-
-
+@import "./sass/_variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 3rem;
-  background-color: #dfdfdf;
-}
+.ticket-tracker {
+  background-image: linear-gradient(rgb(207, 229, 232), rgb(159, 137, 149));
 
-h1, h2 {
-  color: #333333;
-}
+  &__heading {
+    color: $color-secondary;
+    text-shadow: black 2px 2px 2px;
+    text-align: center;
+    font-size: 4rem;
+  }
 
-.btn {
-  font: inherit;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: #800040;
-  color: white;
-  border: 1px solid #800040;
-  margin: 0 1rem;
-}
-
-.btn:hover {
-  background-color: #9c1458;
-  border-color: #9c1458;
-}
-
-.btn--alt {
-  background-color: transparent;
-  color: #800040;
-}
-
-.btn--alt:hover {
-  background-color: #f8dae9;
-}
-
-.card {
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  width: 20rem;
-}
-
-.actions {
-  text-align: right;
-}
-
-
-.grid-container {
-  display: grid;
-  gap: 1rem;
-  text-align: center;
-  justify-content: center;
-  padding: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  &__cards {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
