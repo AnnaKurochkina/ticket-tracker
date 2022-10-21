@@ -9,10 +9,12 @@
 }
 
 .ticket-tracker {
-  background-image: linear-gradient(rgb(207, 229, 232), rgb(159, 137, 149));
+  background-image: linear-gradient($color-gradient1, $color-gradient2);
+  height: 100%;
 
   &__heading {
     color: $color-secondary;
+    background-color: $color-gradient2;
     text-shadow: black 2px 2px 2px;
     text-align: center;
     font-size: 4rem;
@@ -27,4 +29,24 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+
+  &__filter-name {
+    padding: 8px;
+  }
+
+  &__filter-role {
+    display: inline-block;
+    width: 300px;
+  }
+
+  &__select-options {
+    background-color: $color-gradient2;
+    padding-bottom: 10px;
+  }
+}
+
+label {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
 }
