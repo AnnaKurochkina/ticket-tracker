@@ -35,15 +35,22 @@ function App() {
     <div className='ticket-tracker'>
       <h1 className='ticket-tracker__heading'>Ticket Tracker</h1>
       <div className="ticket-tracker__select-options">
-      <label>Search:{" "}</label>
-      <input className="ticket-tracker__filter-name" type="text" value={search} placeholder="Search by name" onChange={handleSearchChange} />
-      <label>Role:</label>
-      <Select
-        isMulti
-        onChange={handleSelectedRole}
-        className="ticket-tracker__filter-role"        
-        options={roleOptions}
+      <label>Search:{" "} 
+      <input className="ticket-tracker__filter-name" 
+        type="text" 
+        value={search} 
+        placeholder="Search by name" 
+        onChange={handleSearchChange} 
       />
+      </label>
+      <label>Role:
+        <Select
+          isMulti
+          onChange={handleSelectedRole}
+          className="ticket-tracker__filter-role"        
+          options={roleOptions}
+        />
+      </label>
       </div>
       <div className='ticket-tracker__cards'>
         {filtered.map((item) => <Employee key={item.id} employee={item}/>)}

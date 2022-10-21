@@ -56,3 +56,23 @@
     font-size: 22px;
   }
 }
+
+@media screen and (min-width: 760px) and (max-width: 900px) and (orientation: landscape) {
+
+  .counter-block {
+    height: 100px;
+    padding: 0;
+  }
+  .employee-card {
+    height: 250px;
+
+
+    &__role {
+      padding-top: 10px;
+    }
+
+    &__btn {
+      margin-bottom: 10px;
+    }
+  }
+}
